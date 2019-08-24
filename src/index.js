@@ -14,7 +14,7 @@ const startServer = async () => {
 
   server.applyMiddleware({ app });
 
-  await mongoose.connect("mongodb://localhost:27017/test3", {
+  await mongoose.connect("mongodb://localhost:27017/sinfronterastax", {
     useNewUrlParser: true
   });
 
