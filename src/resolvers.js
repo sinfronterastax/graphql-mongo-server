@@ -6,8 +6,8 @@ export const resolvers = {
     users: () => User.find()
   },
     Mutation: {
-      createUser: async (_, { nombre, segundo_nombre, apellido_p, apellido_m, email }) => {
-        const user = new User({ nombre, segundo_nombre, apellido_p, apellido_m, email });
+      createUser: async (_, { nombre, apellido_p, apellido_m, email, dateOfBirth, curp, photoIDmx, photoIDusa }) => {
+        const user = new User({ nombre, apellido_p, apellido_m, email, dateOfBirth, curp, photoIDmx, photoIDusa });
         await user.save();
         return user;
       }
